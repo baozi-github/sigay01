@@ -18,7 +18,7 @@
 # 后台页面路由
 
 #登陆页面
-Route::get('admin/login','Admin\LoginController@login')->name('admin.login.login');
+Route::get('login','Admin\LoginController@login')->name('admin.login.login');
 
 #登陆提交
 Route::post('admin/login/dologin','Admin\LoginController@dologin')->name('admin.login.dologin');
