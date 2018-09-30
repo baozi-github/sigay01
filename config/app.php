@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'PRC',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,8 @@ return [
         #验证码
         Mews\Captcha\CaptchaServiceProvider::class,
 
+        Barryvdh\Snappy\ServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
@@ -232,6 +234,9 @@ return [
 
         #验证码
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
+
+        'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
 
     ],
 

@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Articles;
 
-class ArticleController extends Controller
+class ArticleController extends BaseController
 {
     public function index(){
-       return view("home.article.index");
+        $this->get_type();
+        die();
+        $data = Articles::all();
+       return view("home.article.index",compact('data'));
     }
 
     public function info(){

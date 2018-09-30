@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 
@@ -27,10 +24,10 @@ Route::get('login','Admin\LoginController@login')->name('admin.login.login');
 Route::post('admin/login/dologin','Admin\LoginController@dologin')->name('admin.login.dologin');
 
 #首页
-Route::get('admin/index','Admin\IndexController@index')->name('admin.index.index')->middleware('users');
+Route::get('admin/index','Admin\IndexController@index')->name('admin.index.index')->middleware('checkusers');
 
 #文章列表也
-Route::group(['middleware'=>'users','prefix'=>'admin/article','namespace'=>'Admin'],function(){
+Route::group(['middleware'=>'checkusers','prefix'=>'admin/article','namespace'=>'Admin'],function(){
     Route::get('index','ArticleController@index')->name('admin.article.index');
     Route::get('create','ArticleController@create')->name('admin.article.create');
     Route::post('doadd','ArticleController@doadd')->name('admin.article.doadd');
@@ -39,6 +36,17 @@ Route::group(['middleware'=>'users','prefix'=>'admin/article','namespace'=>'Admi
 
     Route::get('test','ArticleController@test')->name('admin.article.test');
 });
+
+#图片列表
+Route::group(['middleware'=>'checkusers','prefix'=>'admin/imgs','namespace'=>'Admin'],function(){
+    #图片首页
+    Route::get('index','ImgsController@index')->name('admin.imgs.index');
+    #pdf 测试
+    Route::get('pdfs','ImgsController@pdfs')->name('admin.imgs.pdfs');
+});
+
+
+
 
 #文章上传路由
 Route::post('admin/public/uppic','Admin\PublicController@uppic')->name('admin.public.uppic');

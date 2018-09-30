@@ -9667,7 +9667,7 @@ var filterNode = UE.filterNode = function () {
 // core/plugin.js
 /**
  * Created with JetBrains PhpStorm.
- * User: campaign
+ * Test: campaign
  * Date: 10/8/13
  * Time: 6:15 PM
  * To change this template use File | Settings | File Templates.
@@ -13792,7 +13792,7 @@ UE.plugin.register('anchor', function (){
 ///commandsTitle  字数统计
 /*
  * Created by JetBrains WebStorm.
- * User: taoqili
+ * Test: taoqili
  * Date: 11-9-7
  * Time: 下午8:18
  * To change this template use File | Settings | File Templates.
@@ -17733,7 +17733,7 @@ UE.plugins['video'] = function (){
 // plugins/table.core.js
 /**
  * Created with JetBrains WebStorm.
- * User: taoqili
+ * Test: taoqili
  * Date: 13-1-18
  * Time: 上午11:09
  * To change this template use File | Settings | File Templates.
@@ -18875,7 +18875,7 @@ UE.plugins['video'] = function (){
 // plugins/table.cmds.js
 /**
  * Created with JetBrains PhpStorm.
- * User: taoqili
+ * Test: taoqili
  * Date: 13-2-20
  * Time: 下午6:25
  * To change this template use File | Settings | File Templates.
@@ -19813,7 +19813,7 @@ UE.plugins['video'] = function (){
 // plugins/table.action.js
 /**
  * Created with JetBrains PhpStorm.
- * User: taoqili
+ * Test: taoqili
  * Date: 12-10-12
  * Time: 上午10:05
  * To change this template use File | Settings | File Templates.
@@ -21691,7 +21691,7 @@ UE.plugins['table'] = function () {
 // plugins/table.sort.js
 /**
  * Created with JetBrains PhpStorm.
- * User: Jinqn
+ * Test: Jinqn
  * Date: 13-10-12
  * Time: 上午10:20
  * To change this template use File | Settings | File Templates.

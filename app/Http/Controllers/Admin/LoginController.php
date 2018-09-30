@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Tests;
+use App\Models\Test;
 
 class LoginController extends Controller
 {
@@ -13,6 +13,7 @@ class LoginController extends Controller
     }
 
     public function dologin(Request $request){
+
         $rules = [
             'username' => 'required',
             'password' => 'required',
@@ -29,12 +30,12 @@ class LoginController extends Controller
        $username = $request->get('username');
        $password = $request->get('password');
 
-       $data = Tests::where('username',$username)->where('password',$password)->get()->toArray();
+       #$data = Test::where('username',$username)->where('password',$password)->get()->toArray();
+        $data = '123' ;
+        #dd(123);
        if($data){
            session(['user'=>$data]);
            echo '欢迎登陆' ;
-          # dump(session('user'));
-           #sleep(3);
            return redirect()->route('admin.index.index');
        }else{
            echo '密码或用户名错误';

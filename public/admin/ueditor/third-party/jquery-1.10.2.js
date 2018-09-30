@@ -3377,7 +3377,7 @@ jQuery.support = (function( support ) {
 	// (WebKit defaults to false instead of true, IE too, if it's in an optgroup)
 	support.optSelected = opt.selected;
 
-	// Tests for enctype support on a form (#6743)
+	// User for enctype support on a form (#6743)
 	support.enctype = !!document.createElement("form").enctype;
 
 	// Makes sure cloning an html5 element does not cause problems
